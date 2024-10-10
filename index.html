@@ -6,16 +6,20 @@
     <title>Página de Opciones - Estilo Netflix</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(to bottom right, #0d0d0d, #141414); /* Fondo más oscuro */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            color: white;
-        }
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), 
+                url('https://i.pinimg.com/originals/df/b9/cb/dfb9cbff37218eaf4c6959de8803e838.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: white;
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.8); /* Sombra hacia adentro en los lados */
+}
 
         .logo-section {
             text-align: center;
@@ -25,7 +29,9 @@
         .logo {
             width: 200px;
             height: auto;
-            filter: drop-shadow(0 0 20px rgba(255, 0, 0, 0.7)); /* Sombra en el logo */
+            text-align: center;
+    margin-bottom: -70px; /* Aumentar el margen inferior */
+            
         }
 
         .question-section {
@@ -46,32 +52,37 @@
             padding: 20px;
         }
 
+        
+
         .button {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 120px;
-            height: 40px;
-            margin: 10px;
-            font-size: 18px; /* Tamaño de letra aumentado */
-            color: white;
-            background-color: rgba(229, 9, 20, 0.7); /* Fondo rojo semitransparente */
-            border: none;
-            border-radius: 20px; /* Bordes redondeados */
-            cursor: pointer;
-            text-decoration: none;
-            transition: transform 0.3s ease, background-color 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Sombra */
-        }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 45px;
+    margin: 10px;
+    font-size: 18px;
+    color: white;
+    background: rgba(255, 255, 255, 0.2); /* Fondo blanco semitransparente */
+    border: none; /* Sin borde */
+    border-radius: 10px; /* Bordes redondeados */
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra */
+    backdrop-filter: blur(8px); /* Efecto de vidrio */
+    
+}
 
-        .button:hover {
-            background-color: rgba(244, 6, 18, 0.9); /* Color rojo más brillante en hover */
-            transform: scale(1.1);
-        }
+.button:hover {
+    background: rgba(255, 255, 255, 0.3); /* Aumentar el brillo en hover */
+    transform: scale(1.05); /* Aumento en hover */
+}
 
-        .button:active {
-            transform: scale(1.05);
-        }
+.button:active {
+    transform: scale(0.95); /* Reducir tamaño al hacer clic */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra más pequeña al hacer clic */
+}
 
         /* Estilo para la ventana modal */
         .modal {
